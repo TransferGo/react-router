@@ -12,6 +12,11 @@ function supportsHistory() {
       ua.indexOf('Windows Phone') === -1) {
     return false;
   }
+
+    if (ua.indexOf('CriOS') !== -1) {
+        return false;
+    }
+
   return (window.history && 'pushState' in window.history);
 }
 
